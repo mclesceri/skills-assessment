@@ -1,0 +1,142 @@
+.all {
+    padding: 100px 0;
+}
+.table td, .table th {
+    border: 0;
+}
+.table {
+    margin: 0;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #212121;
+}
+.table-striped tbody tr {
+    border-bottom: 3px solid #131313;
+    cursor: pointer;
+}
+/* Item Style */
+.item {
+    background: #1a1a1a;
+    border-radius: 15px;
+    color: white;
+    overflow: hidden;
+    border: 3px solid #454545;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.21);
+}
+.item .heading,
+.item .footer,
+.item .content .name,
+.item .content .email {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.item .heading {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(to bottom right, #3e3e3e, #262626);
+    border-bottom: 3px solid #131313;
+}
+.item .content .name,
+.item .content .email {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+.item .content .email {
+    color: #565656;
+    position: relative;
+}
+.item .content .name {
+    border-right: 1px solid #151515;
+}
+.item .content .name>span {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 10px;
+}
+.item .content .name>span.online {
+    background: #02f01e;
+}
+.item .content .name>span.offline {
+    background: #ff0000;
+}
+.item .content .name>span.away {
+    background: #f3f001;
+}
+.item .footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-image: linear-gradient(to bottom right, #3e3e3e, #262626);
+    text-align: right;
+    box-shadow: 0 -3px 10px black;
+}
+.item select {
+    outline: none;
+}
+.item .table .moreinfo {
+    position: absolute;
+    width: 100%;
+    background: #484848;
+    color: white;
+    bottom: 0;
+    right: 0;
+    padding: 10px 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0;
+    list-style-type: none;
+    transform: translateY(100%);
+    z-index: 1;
+    display: none;
+}
+.item .table tr:last-of-type .moreinfo {
+    bottom: auto;
+    top: 0;
+    transform: translateY(-100%);
+}
+.item .table .moreinfo li {
+    margin-bottom: 5px;
+}
+
+.table-striped tbody tr.active {
+    background-color: #484848;
+}
+.table-striped tbody tr.active .email {
+    color: #00f6ff;
+    text-decoration: underline;
+}
+.table-striped tbody tr.active .moreinfo {
+    display: block;
+}
+
+.item .content {
+    position: relative;
+}
+.item .content td {
+    position: relative;
+}
+.item .content td:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.item .content.active td:before {
+    background: rgba(0, 0, 0, 0.8);
+}
+.item .content tr.active td:before {
+    display: none
+}
+
+.item .content tr.removeborder {
+    border-color: black;
+}
+
+.item .content .email>span.hide {
+    display: none;
+}
